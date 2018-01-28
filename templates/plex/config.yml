@@ -1,0 +1,8 @@
+name: Plex
+description: >
+  Plex media server.
+version: 1.0.0
+category: Media Server
+maintainer: Siim
+license: GNU General Public License v3.0
+projectURL: https://github.com/simpss/rancher-plex
