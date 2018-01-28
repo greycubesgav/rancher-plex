@@ -1,0 +1,23 @@
+version: "3.4"
+
+services:
+  plex:
+    image: plexinc/pms-docker:1.10.1.4602-f54242b6b
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: unless-stopped
+    ports:
+      - 32400:32400/tcp
+    environment:
+      - TZ=Europe/Tallinn
+      - PLEX_CLAIM=${plex_claim}
+      - ADVERTISE_IP=http://10.10.1.14:32400/
+      - ALLOWED_NETWORKS=10.10.1.0/24,10.10.2.0/24
+    hostname: plex
+    volumes:
+      - ${config_dir}:/config
+      - ${transcode_dir}:/transcode
+      - /mnt/tank/films:/mnt/films
+      - /mnt/tank/series:/mnt/series
+      - /mnt/tank/music:/mnt/music
