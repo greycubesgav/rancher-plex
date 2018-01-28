@@ -19,12 +19,14 @@
     - variable: config_dir
       description: "host Plex config directory"
       label: "config dir"
+      default: "/mnt/tank/vm/plex/config"
       required: true
       type: "string"
     - variable: transcode_dir
       description: "host Plex transcode directory"
       label: "transcode dir"
       required: true
+      default: "/mnt/tank/vm/plex/transcode"
       type: "string"
     - variable: data_dir
       description: "host Plex data directory"
