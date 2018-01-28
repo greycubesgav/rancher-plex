@@ -12,6 +12,4 @@ plex:
   volumes:
     - ${config_dir}:/config
     - ${transcode_dir}:/transcode
-    - /mnt/tank/films:/mnt/films
-    - /mnt/tank/series:/mnt/series
-    - /mnt/tank/music:/mnt/music
+    - ${data_dir}:/mnt/data
