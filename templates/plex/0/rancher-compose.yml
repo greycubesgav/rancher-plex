@@ -1,12 +1,27 @@
 .catalog:
   name: Plex # Name of the versioned template of the Catalog Entry
-  version: 1.0.0 # Version of the versioned template of the Catalog Entry
+  version: 1.10.1.4602-f54242b6b # Version of the versioned template of the Catalog Entry
   description: Plex Media Server # Description of the versioned template of the Catalog Entry
   uuid: 0041eacf-61c3-4f0a-a90d-ed66a7d67c7c # Unique identifier to be used for upgrades. Please see note.
   minimum_rancher_version: 1.0.0 # The minimum version of Rancher that supports the template
   questions:
+    - variable: plex_claim
+      description: "Plex claim, https://www.plex.tv/claim/"
+      label: "plex claim"
+      required: true
+      type: "string"
     - variable: config_dir
-      description: "Plex config directory"
+      description: "host Plex config directory"
       label: "config dir"
       required: true
+      type: "string"
+    - variable: transcode_dir
+      description: "host Plex transcode directory"
+      label: "transcode dir"
+      required: true
+      type: "string"
+    - variable: data_dir
+      description: "host Plex data directory"
+      label: "data dir"
+      required: false
       type: "string"
