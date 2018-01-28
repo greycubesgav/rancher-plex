@@ -31,3 +31,6 @@
       label: "data dir"
       required: false
       type: "string"
+  services:
+    plex:
+      scale: 1

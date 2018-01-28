@@ -10,7 +10,6 @@ services:
       - PLEX_CLAIM=${plex_claim}
       - ADVERTISE_IP=http://10.10.1.14:32400/
       - ALLOWED_NETWORKS=10.10.1.0/24,10.10.2.0/24
-    hostname: plex
     volumes:
       - ${config_dir}:/config
       - ${transcode_dir}:/transcode
