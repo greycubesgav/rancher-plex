@@ -4,4 +4,9 @@
   description: Plex Media Server # Description of the versioned template of the Catalog Entry
   uuid: 0041eacf-61c3-4f0a-a90d-ed66a7d67c7c # Unique identifier to be used for upgrades. Please see note.
   minimum_rancher_version: 1.0.0 # The minimum version of Rancher that supports the template
-  questions: #Used to request user input for configuration options
+  questions:
+    - variable: config_dir
+      description: "Plex config directory"
+      label: "config dir"
+      required: true
+      type: "string"
