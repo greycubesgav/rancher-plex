@@ -1,7 +1,0 @@
-.catalog:
-  name: Plex # Name of the versioned template of the Catalog Entry
-  version: 1.0.1 # Version of the versioned template of the Catalog Entry
-  description: Plex Media Server # Description of the versioned template of the Catalog Entry
-  uuid: ff16921d-dc57-4439-9de3-921b12f27a91 # Unique identifier to be used for upgrades. Please see note.
-  minimum_rancher_version: 1.0.0 # The minimum version of Rancher that supports the template
-  questions: #Used to request user input for configuration options
