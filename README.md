@@ -9,10 +9,11 @@ Import the repository as a Catalog to rancher
 Go to Admin --> Settings --> Catalog --> Add Catalog
 
 fill the form:
-
-name: plex
-url: https://github.com/simpss/rancher-plex.git
-branch: master
+```
+name: plex  
+url: https://github.com/simpss/rancher-plex.git  
+branch: master  
+```
 
 # Configuration Parameters
 
