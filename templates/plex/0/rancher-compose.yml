@@ -31,7 +31,13 @@
       description: "host Plex data directory"
       label: "data dir"
       default: "/mnt/films"
-      required: false
+      required: true
+      type: "string"
+    - variable: tz
+      description: "Set the timezone inside the container. For example: Europe/London. The complete list can be found here: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"
+      label: "timezone"
+      default: "Europe/Tallinn"
+      required: true
       type: "string"
     - variable: plex_uid
       description: "Plex user UID"
@@ -45,6 +51,18 @@
       default: 1500
       required: true
       type: "int"
+    - variable: allowed_networks
+      description: "networks to allow access to the server without authorization"
+      label: "allowed networks"
+      required: false
+      default: "10.10.1.0/24,10.10.2.0/24"
+      type: "string"
+    - variable: advertise_ip
+      description: "This variable defines the additional IPs on which the server may be be found. For example: http://10.1.1.23:32400. This adds to the list where the server advertises that it can be found."
+      label: "advertise ip"
+      default: "http://10.10.1.14:32400/"
+      required: false
+      type: "string"
   services:
     plex:
       scale: 1
