@@ -33,6 +33,18 @@
       default: "/mnt/films"
       required: false
       type: "string"
+    - variable: plex_uid
+      description: "Plex user UID"
+      label: "user UID"
+      default: 1500
+      required: true
+      type: "int"
+    - variable: plex_gid
+      description: "Plex user GID"
+      label: "user GID"
+      default: 1500
+      required: true
+      type: "int"
   services:
     plex:
       scale: 1
