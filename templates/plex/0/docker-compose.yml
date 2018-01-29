@@ -2,7 +2,7 @@ plex:
   hostname: ${hostname}
   image: plexinc/pms-docker:1.10.1.4602-f54242b6b
   restart: unless-stopped
-  network_mode: "host"
+  network_mode: host
   ports:
     - 32400:32400/tcp
   environment:
