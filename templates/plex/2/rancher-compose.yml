@@ -1,0 +1,68 @@
+.catalog:
+  name: Plex # Name of the versioned template of the Catalog Entry
+  version: latest # Version of the versioned template of the Catalog Entry
+  description: Plex Media Server # Description of the versioned template of the Catalog Entry
+  minimum_rancher_version: 1.0.0 # The minimum version of Rancher that supports the template
+  questions:
+    - variable: plex_claim
+      description: "Plex claim, https://www.plex.tv/claim/"
+      label: "plex claim"
+      required: true
+      type: "string"
+    - variable: hostname
+      description: "Plex container hostname"
+      label: "container hostname"
+      required: true
+      default: "plex"
+      type: "string"
+    - variable: config_dir
+      description: "host Plex config directory"
+      label: "config dir"
+      default: "/mnt/plex/config"
+      required: true
+      type: "string"
+    - variable: transcode_dir
+      description: "host Plex transcode directory"
+      label: "transcode dir"
+      required: true
+      default: "/mnt/plex/transcode"
+      type: "string"
+    - variable: data_dir
+      description: "host Plex data directory"
+      label: "data dir"
+      default: "/mnt/media"
+      required: true
+      type: "string"
+    - variable: tz
+      description: "Set the timezone inside the container. For example: Europe/London. The complete list can be found here: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"
+      label: "timezone"
+      default: "Europe/Bucharest"
+      required: true
+      type: "string"
+    - variable: plex_uid
+      description: "Plex user UID"
+      label: "user UID"
+      default: 1100
+      required: true
+      type: "int"
+    - variable: plex_gid
+      description: "Plex user GID"
+      label: "user GID"
+      default: 1100
+      required: true
+      type: "int"
+    - variable: allowed_networks
+      description: "comma separated list of networks to allow access to the server without authorization"
+      label: "allowed networks"
+      required: false
+      default: "192.168.2.0/24"
+      type: "string"
+    - variable: advertise_ip
+      description: "This variable defines the additional IPs on which the server may be be found. For example: http://10.1.1.23:32400. This adds to the list where the server advertises that it can be found."
+      label: "advertise ip"
+      default: "http://192.168.0.100:32400/"
+      required: false
+      type: "string"
+  services:
+    plex:
+      scale: 1
