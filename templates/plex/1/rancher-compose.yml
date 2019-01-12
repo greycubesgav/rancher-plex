@@ -1,6 +1,6 @@
 .catalog:
   name: Plex # Name of the versioned template of the Catalog Entry
-  version: 1.10.1.4602-f54242b6b # Version of the versioned template of the Catalog Entry
+  version: 1.14.1.5488-cc260c476 # Version of the versioned template of the Catalog Entry
   description: Plex Media Server # Description of the versioned template of the Catalog Entry
   minimum_rancher_version: 1.0.0 # The minimum version of Rancher that supports the template
   questions:

@@ -11,7 +11,7 @@ Go to Admin --> Settings --> Catalog --> Add Catalog
 fill the form:
 ```
 name: plex  
-url: https://github.com/simpss/rancher-plex.git  
+url: https://github.com/greycubesgav/rancher-plex  
 branch: master  
 ```
 
