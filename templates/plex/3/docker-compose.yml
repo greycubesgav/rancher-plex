@@ -1,0 +1,18 @@
+plex:
+  hostname: ${hostname}
+  image: plexinc/pms-docker:1.15.3.876-ad6e39743
+  restart: unless-stopped
+  net: host
+  ports:
+    - 32400:32400/tcp
+  environment:
+    - TZ=${timezone}
+    - PLEX_CLAIM=${plex_claim}
+    - ADVERTISE_IP=${advertise_ip}
+    - ALLOWED_NETWORKS=${allowed_networks}
+    - PLEX_UID=${plex_uid}
+    - PLEX_GID=${plex_gid}
+  volumes:
+    - ${config_dir}:/config
+    - ${transcode_dir}:/transcode
+    - ${data_dir}:/data
